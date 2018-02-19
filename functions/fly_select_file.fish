@@ -5,6 +5,6 @@ function fzy_select_file
     set fzy_flags -q "$argv"
   end
   rg --files|fzy $fzy_flags|read -l foo
+  commandline --append $foo
   commandline -f repaint
-  commandline $foo
 end
