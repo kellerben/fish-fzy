@@ -11,6 +11,6 @@ end
 
 function fzy_select_directory -d 'select directory using fzy'
   __fzy_get_directory_list | fzy | read -l foo
+  commandline --append $foo
   commandline -f repaint
-  commandline $foo
 end
