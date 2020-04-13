@@ -6,7 +6,7 @@ function __fzy_get_directory_list -d 'Get a list of directories using fd or find
 end
 
 function fzy_select_directory -d 'select directory using fzy'
-  __fzy_get_directory_list | fzy | read -l foo
-  commandline --append $foo
+  __fzy_get_directory_list | fzy | read -l selected_dir
+  commandline --insert $selected_dir
   commandline -f repaint
 end
